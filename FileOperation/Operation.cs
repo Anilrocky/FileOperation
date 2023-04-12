@@ -46,5 +46,13 @@ namespace FileOperation
                 Console.WriteLine("File not exists");
             }
         }
+        public void FileCopy(string filePath, string newFile)
+        {
+            if (File.Exists(filePath))
+                File.Copy(filePath, newFile);
+            else
+                Console.WriteLine("File not exists");
+        }
+        
     }
 }
