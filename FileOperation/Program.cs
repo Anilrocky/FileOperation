@@ -9,7 +9,7 @@ namespace FileOperation
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\nChoose option to perform \n1.Check File exists \n2.Read all lines \n3.Exit");
+                Console.WriteLine("\nChoose option to perform \n1.Check File exists \n2.Read all lines \n3.Read all text \n4.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -20,6 +20,9 @@ namespace FileOperation
                         operation.FileReadAllLines(@"D:\BridgeLabz\FileOperation\FileOperation\File.txt");
                         break;
                     case 3:
+                        operation.FileReadAllText(@"D:\BridgeLabz\FileOperation\FileOperation\File.txt");
+                        break;
+                    case 4:
                         flag = false;
                         break;
                 }

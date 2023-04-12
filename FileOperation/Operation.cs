@@ -30,5 +30,21 @@ namespace FileOperation
                 Console.WriteLine("File not exists");
             }
         }
+        public void FileReadAllText(string filePath)
+        {
+            if (File.Exists(filePath))
+            {
+                string[] lines = File.ReadAllLines(filePath);
+                Console.WriteLine(lines);
+                foreach (var data in lines)
+                {
+                    Console.WriteLine(data);
+                }
+            }
+            else
+            {
+                Console.WriteLine("File not exists");
+            }
+        }
     }
 }
