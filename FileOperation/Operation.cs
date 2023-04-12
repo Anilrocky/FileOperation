@@ -53,6 +53,12 @@ namespace FileOperation
             else
                 Console.WriteLine("File not exists");
         }
-        
+        public void FileDelete(string newFile)
+        {
+            if (File.Exists(newFile))
+                File.Delete(newFile);
+            else
+                Console.WriteLine("File not exists");
+        }
     }
 }
