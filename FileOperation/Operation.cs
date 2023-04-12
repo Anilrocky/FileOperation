@@ -77,5 +77,22 @@ namespace FileOperation
                 Console.WriteLine("File not exists");
             }
         }
+        public void FileStreamWriter(string filePath)
+        {
+            if (File.Exists(filePath))
+            {
+                using (StreamWriter sr = File.AppendText(filePath))
+                {
+                    string word = "currently working on c#";
+                    sr.WriteLine(word);
+                    sr.Close();
+                    Console.WriteLine(File.ReadAllText(filePath));
+                }
+            }
+            else
+            {
+                Console.WriteLine("File not exists");
+            }
+        }
     }
 }
